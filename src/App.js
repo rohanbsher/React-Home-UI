@@ -4,8 +4,10 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Chat from './component/chat'
 import Login from './component/Login'
-import styled from 'styled-components';
+import styled from 'styled-components'
 import Header from './component/Header'
+import Sidebar from './component/sidebar'
+import sidebar from './component/sidebar';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
           <Header />
           <Main>
             <Switch>
+              <Sidebar />
               <Route path="/room">
                 <Chat />
               </Route>
@@ -35,11 +38,13 @@ export default App;
 const Container = styled.div`
 width: 100%;
 height: 100vh; 
-background: orange;
+
+display: grid;
+grid-template-rows: 10vh auto;
 `
-
 const Main = styled.div`
-
 background: blue;
+display: grid;
+grid-template-columns: 260px auto;
 
 `

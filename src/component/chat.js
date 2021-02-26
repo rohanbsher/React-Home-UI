@@ -2,7 +2,7 @@ import React from 'react'
 
 function chat() { // chat component
     return (
-        <div>
+        <div style = {{background: "White"}}>
             Chat -Rohan
         </div>
     )
